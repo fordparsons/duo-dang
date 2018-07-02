@@ -3,7 +3,8 @@ Canned Duo Environment for Web Applications
 
 ## Pre-Requisites
 1. Web-facing host with docker and docker-compose installed
-2. DNS records for your Duo Access Gateway and Duo Network Gateway
+2. Allow inbound ports 80, 443, 8443, 8888, (optional: 22 if planning on using SSH through DNG)
+3. DNS records for your Duo Access Gateway and Duo Network Gateway
 
 ## Deploy
 ```
