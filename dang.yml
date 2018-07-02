@@ -1,0 +1,81 @@
+version: '2.1'
+services:
+  portal:
+    image: duosecurity/network-gateway@sha256:f1b67fbcb34b3c57242c7c65a248d4031bb61821dc93be153336641e350c5dba
+    ports:
+    - "80:80"
+    - "443:443"
+    - "8443"
+    container_name: network-gateway-portal
+    depends_on:
+    - redis
+    links:
+    - redis
+    sysctls:
+    - net.core.somaxconn=32768
+    restart: always
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "20"
+  admin:
+    image: duosecurity/network-gateway@sha256:75588c0381c84cfd2560ebc5ee899d466f80ce495481d99c2c61c81d3bc616e1
+    ports:
+    - "8888:443"
+    container_name: network-gateway-admin
+    depends_on:
+    - redis
+    links:
+    - redis
+    restart: always
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "20"
+  redis:
+    image: duosecurity/network-gateway@sha256:aec0282c6eb35b6a8067f16a66e632485e80c3eb3f97fd07cee3683b501873e7
+    container_name: network-gateway-redis
+    volumes:
+    - network-gateway-data:/data
+    restart: always
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "20"
+  access-gateway:
+    image: duosecurity/access-gateway@sha256:b25f9b7ae7837db95deb072bed0bc415cb57a5502c7cd16a3b0e0a8411b87340
+    ports:
+    - "8000"
+    - "4443"
+    - "8443:8443"
+    container_name: access-gateway
+      restart: always
+      logging:
+        driver: json-file
+        options:
+          max-size: "50m"
+          max-file: "20"
+    volumes:
+    - access-gateway-data:/data/
+    labels:
+      com.duo.access-gateway.builder.version: "38dbea4b"
+      com.duo.access-gateway.code.version: "DAG_1.5.3_191"
+      com.duo.access-gateway.built: "Thu, 05 Apr 2018 15:49:49 -0000"
+volumes:
+    network-gateway-data:
+    access-gateway-data:
