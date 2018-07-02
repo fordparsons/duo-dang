@@ -17,6 +17,7 @@ docker-compose -p dang -f dang.yml up -d
 3. Input the IP address (disregard CIDR) of your 'openldap' container. To find this, run `docker network inspect dang_default` and look for the ip address listed under the 'openldap' container.
 4. Specify port 389 and leave 'Transport Type' as 'Clear'
 5. Specify the following:
+
 Attributes | uid,mail
 
 Search base | dc=example,dc=org
