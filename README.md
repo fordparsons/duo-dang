@@ -2,8 +2,8 @@
 Canned Duo Environment for Web Applications
 
 ## Pre-Requisites
-Web-facing host with docker and docker-compose installed
-DNS records for your Duo Access Gateway and Duo Network Gateway
+1. Web-facing host with docker and docker-compose installed
+2. DNS records for your Duo Access Gateway and Duo Network Gateway
 
 ## Deploy
 ```
