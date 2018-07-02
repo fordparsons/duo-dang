@@ -1,4 +1,4 @@
-dn: uid=archie,dc=duomaclab,dc=local
+dn: uid=archie,dc=example,dc=org
 changetype: add
 uid: archie
 cn: archie
@@ -6,9 +6,9 @@ sn: andrews
 objectClass: top
 objectClass: inetOrgPerson
 userPassword: Duodang123!
-mail: archie@duomaclab.local
+mail: archie@example.org
 
-dn: uid=jughead,dc=duomaclab,dc=local
+dn: uid=jughead,dc=example,dc=org
 changetype: add
 uid: jughead
 cn: jughead
@@ -16,9 +16,9 @@ sn: jones
 objectClass: top
 objectClass: inetOrgPerson
 userPassword: Duodang123!
-mail: jughead@duomaclab.local
+mail: jughead@example.org
 
-dn: uid=betty,dc=duomaclab,dc=local
+dn: uid=betty,dc=example,dc=org
 changetype: add
 uid: betty
 cn: betty
@@ -26,9 +26,9 @@ sn: Cooper
 objectClass: top
 objectClass: inetOrgPerson
 userPassword: Duodang123!
-mail: betty@duomaclab.local
+mail: betty@example.org
 
-dn: uid=veronica,dc=duomaclab,dc=local
+dn: uid=veronica,dc=example,dc=org
 changetype: add
 uid: veronica
 cn: veronica
@@ -36,4 +36,4 @@ sn: lodge
 objectClass: top
 objectClass: inetOrgPerson
 userPassword: Duodang123!
-mail: veronica@duomaclab.local
+mail: veronica@example.org
