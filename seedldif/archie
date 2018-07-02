@@ -1,0 +1,9 @@
+dn: uid=archie,dc=<ORGANIZATION>,dc=com
+changetype: add
+uid: archie
+cn: archie
+sn: andrews
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: Duodang123!
+mail: archie@<YOUR DOMAIN>
