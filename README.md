@@ -18,9 +18,13 @@ docker-compose -p dang -f dang.yml up -d
 4. Specify port 389 and leave 'Transport Type' as 'Clear'
 5. Specify the following:
 Attributes | uid,mail
+
 Search base | dc=example,dc=org
+
 Search attributes | uid,mail
+
 Search username | cn=readonly,dc=example,dc=org
+
 Search password | readonly
 
 ### Duo Network Gateway
