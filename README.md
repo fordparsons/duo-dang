@@ -30,7 +30,7 @@ Search username | cn=readonly,dc=example,dc=org
 Search password | readonly
 
 ### Duo Network Gateway
-Follow directions at https://duo.com/docs/dng#protect-a-web-application-with-duo-network-gateway-, treating Duo Access Gateway as an internal web application. You will need to generate a self-signed certificate for the Duo Access Gateway in order to use HTTPS internally (which the Duo Access Gateway requires).
+Follow directions at https://duo.com/docs/dng#protect-a-web-application-with-duo-network-gateway-, treating Duo Access Gateway as an internal web application. You will need to generate a self-signed certificate for the Duo Access Gateway in order to use HTTPS internally (which the Duo Access Gateway requires). The internal URL will be `https://access-gateway:4443`
 
 ### openldap if using example LDIF "Riverdale"
 ```
