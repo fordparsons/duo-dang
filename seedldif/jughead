@@ -1,9 +1,0 @@
-dn: uid=jughead,dc=<ORGANIZATION>,dc=com
-changetype: add
-uid: jughead
-cn: jughead
-sn: jones
-objectClass: top
-objectClass: inetOrgPerson
-userPassword: Duodang123!
-mail: jughead@<YOUR DOMAIN>

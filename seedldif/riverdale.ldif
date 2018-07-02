@@ -1,0 +1,39 @@
+dn: uid=archie,dc=duomaclab,dc=local
+changetype: add
+uid: archie
+cn: archie
+sn: andrews
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: Duodang123!
+mail: archie@duomaclab.local
+
+dn: uid=jughead,dc=duomaclab,dc=local
+changetype: add
+uid: jughead
+cn: jughead
+sn: jones
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: Duodang123!
+mail: jughead@duomaclab.local
+
+dn: uid=betty,dc=duomaclab,dc=local
+changetype: add
+uid: betty
+cn: betty
+sn: Cooper
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: Duodang123!
+mail: betty@duomaclab.local
+
+dn: uid=veronica,dc=duomaclab,dc=local
+changetype: add
+uid: veronica
+cn: veronica
+sn: lodge
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: Duodang123!
+mail: veronica@duomaclab.local
