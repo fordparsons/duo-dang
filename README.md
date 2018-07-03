@@ -1,5 +1,5 @@
 # duo-dang
-Canned Duo Environment for Web Applications
+Canned Duo Environment for Web Applications. Deploys Duo Access Gateway, Duo Network Gateway, and OpenLDAP as an authentication source, co-located on one host with Duo Network Gateway front-end. Suitable for lab or testing environments.
 
 ## Pre-Requisites
 1. Web-facing host with docker and docker-compose installed
