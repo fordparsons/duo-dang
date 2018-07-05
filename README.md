@@ -35,6 +35,8 @@ Search password | readonly
 ### Duo Network Gateway
 Follow directions at https://duo.com/docs/dng#protect-a-web-application-with-duo-network-gateway-, treating Duo Access Gateway as an internal web application. You will need to generate a self-signed certificate for the Duo Access Gateway in order to use HTTPS internally (which the Duo Access Gateway requires). The internal URL will be `https://access-gateway:4443`
 
+In order for the Duo Network Gateway to use the Duo Access Gateway that is deployed here, you will need to employ URI whitelisting. The record will be for `/dag`
+
 ### OpenLDAP if using example LDIF "Riverdale"
 ```
 docker cp ./seedldif/riverdale.ldif openldap:/tmp/riverdale.ldif
