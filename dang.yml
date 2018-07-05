@@ -59,9 +59,10 @@ services:
   access-gateway:
     image: duosecurity/access-gateway@sha256:b25f9b7ae7837db95deb072bed0bc415cb57a5502c7cd16a3b0e0a8411b87340
     ports:
+    - "8443:8443"
+    expose:
     - "8000"
     - "4443"
-    - "8443:8443"
     container_name: access-gateway
     restart: always
     logging:
@@ -75,7 +76,7 @@ services:
       com.duo.access-gateway.builder.version: "38dbea4b"
       com.duo.access-gateway.code.version: "DAG_1.5.3_191"
       com.duo.access-gateway.built: "Thu, 05 Apr 2018 15:49:49 -0000"
-  directory:
+  openldap:
     image: osixia/openldap:1.2.1
     container_name: openldap
     environment:
@@ -108,10 +109,10 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - /var/lib/ldap
-      - /etc/ldap/slapd.d
-      - /container/service/slapd/assets/certs/
-    ports:
+      - openldap-ldap:/var/lib/ldap
+      - openldap-slapd.d:/etc/ldap/slapd.d
+      - openldap-certs:/container/service/slapd/assets/certs/
+    expose:
       - "389"
       - "636"
     domainname: "example.org" # important: same as hostname
@@ -119,3 +120,6 @@ services:
 volumes:
   network-gateway-data:
   access-gateway-data:
+  openldap-ldap:
+  openldap-slapd.d:
+  openldap-certs:
